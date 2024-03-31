@@ -15,6 +15,11 @@ for data in complaints:
     for ents in token.ents:
         print(ents, ents.label_, ents.label)          # label_ gives the code where label gives the numeric code
 
-        
+print( "--------------------Simillarity--------------------")    
+for token in complaints:
+    token = nlp(token)
+    for token_ in complaints:
+        token_ = nlp(token_)
+        print(token.similarity(token_)) 
         
         
